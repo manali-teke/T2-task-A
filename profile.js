@@ -39,7 +39,7 @@ function validateProfile(data) {
   }
 
   if (data.age.trim() !== "") {
-    const age = data.age.trim();
+    const age = Number(data.age.trim());
     if (!Number.isInteger(age) || age < 13 || age > 120) {
       errors.age = "Age must be a whole number from 13 to 120.";
     }
